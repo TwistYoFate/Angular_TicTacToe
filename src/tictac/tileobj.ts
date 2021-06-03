@@ -37,6 +37,6 @@ export class TileObj {
 
   setColor(event: any, color: string) {
     console.log(event.target);
-    event.target.style.backgroundColor = color;
+    // event.target.style.backgroundColor = color;
   }
 }

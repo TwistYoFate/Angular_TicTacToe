@@ -20,6 +20,14 @@ export class BoardComponent implements OnInit {
     }
   }
 
+  displayWon() {
+    if (this.store.winFlag) {
+      setTimeout(() => {
+        alert(this.store.chance + ' is the winner !');
+      }, 200);
+    }
+  }
+
   resetTiles() {
     // this.someoneWon = false;
     for (let i = 0; i < 9; i++) {
