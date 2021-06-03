@@ -1,0 +1,95 @@
+#tictac {
+  position: relative;
+  background-color: grey;
+  width: 76%;
+  height: 100vh;
+  margin-left: 10%;
+  padding-left: 2%;
+  margin-right: 10%;
+  padding-right: 2%;
+}
+
+.board {
+  position: relative;
+  width: 33vw;
+  height: 33vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* align-content: center; */
+  justify-items: center;
+  background-color: white;
+}
+
+.tileClass {
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-items: center;
+  width: 31%;
+  border: 1px solid lime;
+}
+
+.tileClass:hover {
+  background-color: yellowgreen;
+}
+
+.section {
+  position: relative;
+  background-color: pink;
+  height: 15vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+}
+
+.scores {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: skyblue;
+  font-family: 'Courier New', Courier, monospace;
+  flex-wrap: wrap;
+}
+
+.stacks {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: left;
+  background-color: skyblue;
+  font-family: 'Courier New', Courier, monospace;
+  flex-wrap: wrap;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.btn {
+  height: 100%;
+  width: 50%;
+  border: 2px solid skyblue;
+  background-color: white;
+  padding: 0.5em 1em 0.5em 1em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 1.5em;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.btn:active {
+  border: 2px solid #00ff65;
+}

@@ -1,0 +1,33 @@
+<div id="tictac">
+  <header class="section">
+    Tic Tac Toe
+  </header>
+  <section class="section scores">
+    <h3>Score of "X" : {{store.xscore}}</h3>
+    <h3>Score of "O" : {{store.oscore}}</h3>
+  </section>
+  <section class="section stacks">
+    <h3>"X" move stack : <span *ngFor="let x of store.xmoveStack">{{x}}</span>
+    </h3>
+    <h3>"O" move stack : <span *ngFor="let x of store.omoveStack">{{x}}</span></h3>
+  </section>
+  <section class="section">
+    <section class="board col">
+      <div *ngFor="let tile of tiles" class="tileClass">
+        <tictac-tile [load]="tile" (click)="
+          tile.clicked($event,store.chance,store.winFlag);
+          clickedByPlayer($event,tile);">
+        </tictac-tile>
+      </div>
+    </section>
+    <section class="col">
+      <div *ngIf="store.winFlag">{{store.chance}}</div>
+    </section>
+  </section>
+  <section class="section buttons">
+    <button class="btn btn_shadow" (click)="store.newGame();resetTiles();">New Game</button>
+    <button class="btn btn_shadow" (click)="store.reset();resetTiles();">Reset</button>
+  </section>
+
+
+</div>
